@@ -8,7 +8,7 @@ class NotFound extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Ticket title="" tagline="A Boston, Mass. original" />
+        <Ticket title="404" tagline="Page Not Found" />
         <Header tagline="404: You have found a missing page!" />
         <Content />
         <Footer />

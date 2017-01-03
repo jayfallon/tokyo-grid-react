@@ -4,6 +4,7 @@ var autoprefixer = require('autoprefixer');
 var lost         = require('lost');
 var nesting      = require('postcss-nesting');
 var partial      = require('postcss-import');
+var cssnano      = require('gulp-cssnano');
 
 // default gulp task
 gulp.task('default', ['watch']);
@@ -22,7 +23,8 @@ gulp.task('build:css', function() {
                 autoprefixer(),
 				lost(),
 				nesting()
-            ])
+            ]),
+			cssnano()
         )
 		.pipe(gulp.dest('./src/'));
 });

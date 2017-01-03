@@ -23,11 +23,11 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 body {
-	background-color: var(--brown-bg);
-	background-image: url(http://tokyo-grid.s3.amazonaws.com/debut-dark.png);
+	background: rgba(52, 44, 41, 1.0) url(http://tokyo-grid.s3.amazonaws.com/debut-dark.png);
 	position: relative;
 	color: var(--body-text);
 	font-family: var(--body-font);
@@ -37,8 +37,12 @@ body {
 
 header {
 	background: var(--header-bg);
-	padding: 12px 12px 24px 120px;
+	padding: 12px 120px 24px 120px;
 	color: var(--accent-color);
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-flow: column nowrap;
 
 	& a {
 		color: var(--body-text);
@@ -52,45 +56,32 @@ header {
 footer {
 	padding: 40px 0;
 	border-top: 12px solid var(--blue-bg);
-	color: #FFB531;
-}
 
-footer .footer-items {
-	margin: 0 auto;
-	/*width: 960px;*/
-	color: var(--footer-text);
+	& .footer-items {
+		margin: 0 auto;
+		width: 960px;
+		color: #FFB531;
+		text-align: center;
+		/*lost-center: 960px;*/
 
-	lost-center: 960px;
-}
-
-footer ul {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	lost-column: 1/1;
-}
-
-footer ul li {
-	margin-right: 12px;
-}
-
-footer h3 {
-	font-size: 20px;
-	font-weight: bold;
-	lost-column: 1/1;
+		& a {
+			color: #FFB531;
+			text-decoration: underline;
+		}
+	}
 }
 
 .container {
 	background-color: var(--body-text);
 	background: url(http://tokyo-grid.s3.amazonaws.com/newspaper.png) 100% 100% fixed;
 	border-bottom: 1px solid var(--color-gray);
+	height: 90vh;
 }
 
 .items {
 	margin: 0 auto;
 	padding: 48px 0;
-	height: 100%;
+	/*height: 100%;*/
 
 	lost-center: 960px;
 
@@ -104,7 +95,7 @@ footer h3 {
 
 .item-content {
 	background-color: var(--color-white);
-	background: url(http://tokyo-grid.s3.amazonaws.com/halftone.png);
+	background: url(http://tokyo-grid.s3.amazonaws.com/halftone.png) no-re;
 	padding: 12px;
 	height: 300px;
 
@@ -157,30 +148,42 @@ footer h3 {
 
 .ticket {
 	background: url(http://tokyo-grid.s3.amazonaws.com/seamless.png);
-	padding: 12px 60px 12px 12px;
 	color: var(--color-white);
 	position: absolute;
-	left: 120px;
-	top: 160px;
-	box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+	left: 58px;
+	top: 40px;
+	box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.3);
 	word-wrap: nowrap;
 	transform: rotate(90deg);
 	transform-origin: top left;
-}
 
-.ticket link {
-	color: var(--color-white);
-	text-decoration: none;
-	font-weight: normal;
-	word-wrap: nowrap;
-}
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 
-.ticket span {
-	font-weight: bold;
-}
+	& .ticket-logo {
+		background: cornsilk url(http://tokyo-grid.s3.amazonaws.com/rooster.png) no-repeat center center;
+		padding: 6px;
+		border: 1px solid var(--accent-dark);
+		width: 40px;
+		height: 40px;
+		transform: rotate(-90deg);
+	}
 
-.ticket span:after {
-	content: ' ';
+	& .ticket-text {
+		padding: 6px 12px;
+		border: 1px solid var(--accent-dark);
+		border-left: 0;
+		height: 40px;
+
+		display: flex;
+		align-items: center;
+
+		& span {
+			padding-right: 12px;
+			font-weight: bold;
+		}
+	}
 }
 
 .the-ring {

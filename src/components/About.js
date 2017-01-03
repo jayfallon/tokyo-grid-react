@@ -8,7 +8,7 @@ class About extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Ticket title="Boston" tagline="Story" />
+        <Ticket title="About" tagline="My Little Story" />
         <Header tagline="The one page about me." />
         <Content />
         <Footer />
