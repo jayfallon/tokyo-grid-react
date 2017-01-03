@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "lost": "^8.0.0",
+    "postcss-nesting": "^2.3.1"
+  },
+  "devDependencies": {
+    "postcss-partial-import": "^3.1.0"
+  }
+}

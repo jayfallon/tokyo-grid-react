@@ -6,13 +6,33 @@
     "react-scripts": "0.8.4"
   },
   "dependencies": {
+    "autoprefixer": "^6.6.0",
+    "babel-eslint": "7.0.0",
+    "eslint": "3.8.1",
+    "eslint-config-react-app": "0.3.0",
+    "eslint-plugin-flowtype": "2.21.0",
+    "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.4.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "lost": "^8.0.0",
+    "postcss-assets": "^4.1.0",
+    "postcss-import": "^9.0.0",
+    "postcss-nesting": "^2.3.1",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-router": "4.0.0-alpha.4",
+    "react-typekit": "^1.0.3",
+    "reset-css": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start | gulp",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }

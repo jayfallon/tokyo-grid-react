@@ -1,9 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render } from 'react-dom';
+import { BrowserRouter, Match, Miss } from 'react-router';
+
+import App from './components/App';
+import NotFound from './components/NotFound';
+import About from './components/About';
+
 import './index.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+const Root = () => {
+	return (
+		<BrowserRouter>
+			<div>
+				<Match exactly pattern="/" component={App} />
+				<Match exactly pattern="/About" component={About} />
+				<Miss component={NotFound} />
+			</div>
+		</BrowserRouter>
+	)
+}
+
+render(<Root/>, document.querySelector('#root'));
