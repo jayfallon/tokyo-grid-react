@@ -20,14 +20,14 @@ class Content extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div className="containerv">
 				<div className="items">
-					<button onClick={this.loadSamples}>Load Data</button>
 					<form onSubmit={this.gotToProject}>
 						<h2>Please click</h2>
 						<input ref={(input) => {this.projectInput = input}} type="text" required placeholder="Store name" defaultValue={getFunName()} />
 						<button type="submit">Click</button>
 					</form>
+					
 				</div>
 			</div>
 		);

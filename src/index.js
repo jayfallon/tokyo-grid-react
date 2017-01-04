@@ -6,6 +6,7 @@ import App from './components/App';
 import Project from './components/Project';
 import NotFound from './components/NotFound';
 import About from './components/About';
+import AddProject from './components/AddProject';
 
 import './index.css';
 
@@ -14,7 +15,8 @@ const Root = () => {
 		<BrowserRouter>
 			<div>
 				<Match exactly pattern="/" component={App} />
-				<Match exactly pattern="/About" component={About} />
+				<Match exactly pattern="/about" component={About} />
+				<Match exactly pattern="/add-project" component={AddProject} />
 				<Match pattern="/project/:projectId" component={Project} />
 				<Miss component={NotFound} />
 			</div>
